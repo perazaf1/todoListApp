@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
@@ -73,7 +74,8 @@ public class TodoApp extends Application {
 
         // Scene
         Scene scene = new Scene(root, 800, 600);
-
+        Image icon = new Image(getClass().getResourceAsStream("/icon.png"));
+        stage.getIcons().add(icon);
         stage.setTitle("Todo List App");
         stage.setScene(scene);
         stage.show();

@@ -1,14 +1,25 @@
+
+
 public class Task {
     private String task;
     private boolean completed;
-    public String status;
-    public String time;
+    private String status;
+    private String priority;
 
-    public Task(String task) {
-        this.task = task;
-        completed = false;
-        status = "Pending";
-        time = "00:00";
+    public String getTask() {
+        return task;
+    };
+    public boolean isCompleted(){
+        return completed;
+    };
+    public String getStatus(){
+        return status;
+    };
+    public String getPriority(){
+        return priority;
+    };
 
-    }
+
+
+
 }
