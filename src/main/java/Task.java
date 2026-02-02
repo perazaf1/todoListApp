@@ -38,23 +38,18 @@ public class Task {
     public String getTitle() {
         return title.get();
     }
-
     public String getDescription() {
         return description.get();
     }
-
     public String getDueDate() {
         return dueDate.get();
     }
-
     public boolean isCompleted() {
         return completed.get();
     }
-
     public String getStatus() {
         return status.get();
     }
-
     public String getPriority() {
         return priority.get();
     }
@@ -66,23 +61,18 @@ public class Task {
     public StringProperty titleProperty() {
         return title;
     }
-
     public StringProperty descriptionProperty() {
         return description;
     }
-
     public StringProperty dueDateProperty() {
         return dueDate;
     }
-
     public BooleanProperty completedProperty() {
         return completed;
     }
-
     public StringProperty statusProperty() {
         return status;
     }
-
     public StringProperty priorityProperty() {
         return priority;
     }
@@ -93,11 +83,9 @@ public class Task {
     public void setTitle(String title) {
         this.title.set(title);
     }
-
     public void setDescription(String description) {
         this.description.set(description);
     }
-
     public void setDueDate(String dueDate) {
         this.dueDate.set(dueDate);
     }
