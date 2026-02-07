@@ -19,6 +19,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import java.beans.*;
 
 public class TodoApp extends Application {
 
@@ -40,6 +41,7 @@ public class TodoApp extends Application {
         taskDescription.setMaxWidth(600);
         taskDescription.setMaxHeight(100);
 
+
         // Date picker for due date (calendar to pick a precise place)
         DatePicker datePicker = new DatePicker();
         datePicker.setPromptText("Select a date...");
@@ -55,6 +57,7 @@ public class TodoApp extends Application {
         // TableView to display tasks (make a table, not a list)
         ObservableList<Task> tasks = FXCollections.observableArrayList();
         TableView<Task> tableView = new TableView<>(tasks);
+        tableView.setPlaceholder(new Label("No tasks yet!"));
 
         // Create table columns (columns with header already included)
         TableColumn<Task, Boolean> completedCol = new TableColumn<>("Completed");
@@ -105,6 +108,16 @@ public class TodoApp extends Application {
             }
         });
 
+        //JSON Object
+
+
+
+        //Save button
+        Button saveTask = new Button("Save Task");
+        saveTask.setOnAction(e ->{
+
+        });
+
         // Delete task button
         Button deleteTask = new Button("Delete Task");
         deleteTask.setOnAction(e -> {
@@ -120,7 +133,7 @@ public class TodoApp extends Application {
         // Top bar: contains input fields and buttons
         HBox topBar = new HBox(10);
         topBar.setPadding(new Insets(20));
-        topBar.getChildren().addAll(taskTitle, taskDescription, datePicker, priorityBox, addTask, deleteTask);
+        topBar.getChildren().addAll(taskTitle, taskDescription, datePicker, priorityBox, addTask, deleteTask, saveTask);
 
         // Label for task list section
         Label visualizeTask = new Label("Visualize your tasks");
@@ -147,6 +160,7 @@ public class TodoApp extends Application {
     }
 
     public static void main(String[] args) {
+
         launch(args);
     }
 }
